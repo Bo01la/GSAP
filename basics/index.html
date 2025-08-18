@@ -4,19 +4,75 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GSAP Basics</title>
+    <!-- including GSAP to the project -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"
+      defer
+    ></script>
     <script src="scripts.js" defer></script>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+      .nav {
+        height: 15vh;
+        background-color: red;
+        padding: 10px;
+      }
+      .links {
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: aliceblue;
+        font-size: 26px;
+      }
+
+      .content {
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .side-left {
+        width: 15vw;
+        background-color: green;
+      }
+
+      .side-right {
+        width: 15vw;
+        background-color: green;
+      }
+
+      .btn {
+        height: 50px;
+        align-self: center;
+        font-size: 26px;
+        font-weight: 600;
+      }
+
+      .footer {
+        height: 15vh;
+        background-color: blue;
+        transform: translateY(100%);
+      }
+    </style>
   </head>
   <body>
     <header class="nav">
       <div class="links">
-        <div class="link"></div>
-        <div class="link"></div>
-        <div class="link"></div>
+        <div class="link">Link 1</div>
+        <div class="link">Link 2</div>
+        <div class="link">Link 3</div>
       </div>
     </header>
     <div class="content">
       <div class="side-left"></div>
-      <button class="btn"></button>
+      <button class="btn">Reverse Animation</button>
       <div class="side-right"></div>
     </div>
     <footer class="footer"></footer>
