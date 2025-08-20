@@ -1,6 +1,19 @@
-const GsapTo = () => {
-  // TODO: Implement the gsap.to() method
+// 1- import gsap and useGSAP from "gsap" and "@gsap/react"
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
+const GsapTo = () => {
+  // useGSAP hook is just like useEffect, it takes a call back function + a dependency
+  useGSAP(() => {
+    gsap.to("#blue-box", {
+      x: 250,
+      repeat: -1,
+      duration: 2,
+      yoyo: true, // to make it go forward and backword
+      rotation: 360,
+      ease: "elastic",
+    });
+  }, []);
   return (
     <main>
       <h1>GsapTo</h1>
@@ -25,7 +38,7 @@ const GsapTo = () => {
           rel="noreferrer noopener nofollow"
         >
           gsap.to()
-        </a>{" "}
+        </a>
         method.
       </p>
 

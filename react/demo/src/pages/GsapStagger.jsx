@@ -1,8 +1,27 @@
-const GsapStagger = () => {
-  // TODO: Implement the gsap.stagger() method
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
+const GsapStagger = () => {
+  useGSAP(() => {
+    gsap.to(".stagger-box", {
+      y: 200,
+      routation: 360,
+      repeat: -1,
+      duration: 1.5,
+      borderRadius: "100%",
+      ease: "power3.inOut",
+      yoyo: true,
+      // stagger: 0.5 // normal stagger to animate elements 1 by 1
+      stagger: {
+        amount: 1.5, // the amount of time to stagger the animations between each element
+        grid: [2, 1], // the number of columns and rows in the grid
+        axis: "y", // the axis along which to stagger the animations
+        from: "center", // the starting position of the staggered animations
+      },
+    });
+  }, []);
   return (
-    <main>
+    <main className="overflow-hidden">
       <h1>GsapStagger</h1>
 
       <p className="mt-5 text-gray-500">

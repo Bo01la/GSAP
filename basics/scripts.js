@@ -70,3 +70,24 @@ btn.addEventListener("click", () => {
   myTimeline.timeScale(3); // make playback 3x faster
   myTimeline.reverse(); // reverse the entire timeline animation
 });
+
+
+// General rules for position parameters:
+
+// Absolute time (number) → "2" = start at 2s on the timeline.
+
+// Relative time (+=, -=) → "+=0.5" = start 0.5s after the previous tween ends.
+
+// Labels → "intro" = start at a named point in the timeline.
+
+// "<" = align with previous tween’s start.
+
+// "<.5" = 0.5s after previous tween starts.
+
+// "<-0.5" = 0.5s before previous tween starts.
+
+// ">" = align with previous tween’s end.
+
+// ">.2" = 0.2s after previous tween ends.
+
+// ">-0.2" = 0.2s before previous tween ends.
